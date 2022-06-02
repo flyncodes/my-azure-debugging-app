@@ -11,6 +11,9 @@ RUN apt-get update \
 RUN curl -fsSL https://deb.nodesource.com/setup_16.x | bash -
 RUN apt-get install --yes --no-install-recommends nodejs
 
+RUN nodejs -v
+RUN npm -v
+
 # Install app dependencies
 # A wildcard is used to ensure both package.json AND package-lock.json are copied
 # where available (npm@5+)
