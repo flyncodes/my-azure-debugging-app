@@ -4,11 +4,12 @@ FROM haproxy:lts
 # Create app directory
 WORKDIR /usr/src/app
 
-# Switch to root user and install NodeJS
+# Switch to root user and install NodeJS and curl
 USER root
-RUN curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
 RUN apt-get update \  
-     && apt-get install --yes --no-install-recommends nodejs
+     && apt-get install --yes --no-install-recommends curl
+RUN curl -fsSL https://deb.nodesource.com/setup_16.x | bash -
+RUN apt-get install --yes --no-install-recommends nodejs
 
 # Install app dependencies
 # A wildcard is used to ensure both package.json AND package-lock.json are copied
