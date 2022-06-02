@@ -1,0 +1,13 @@
+{
+  "name": "my-azure-debugging-app",
+  "version": "1.0.0",
+  "description": "Uses Docker to install HAProxy and run an NodeJS app which allows me to easily test HAProxy config and what headers Azure App Service are setting",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Flyn.Codes",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
