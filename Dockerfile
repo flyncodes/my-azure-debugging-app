@@ -25,9 +25,7 @@ RUN npm ci --only=production
 # Bundle app source
 COPY . .
 
-EXPOSE 8080
-
 # Switch back to HAProxy user before starting
 USER haproxy
 
-CMD [ "node", "server.js" ]
+CMD [ "node", "app.js" ]
