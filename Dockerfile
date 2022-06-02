@@ -9,9 +9,9 @@ USER root
 RUN apt-get update \  
      && apt-get install --yes wget
 RUN wget -qO- https://deb.nodesource.com/setup_16.x | bash -
-RUN apt-get install --yes nodejs
+RUN apt-get install --yes nodejs npm
 
-RUN nodejs -v
+RUN node -v
 RUN npm -v
 
 # Install app dependencies
