@@ -6,9 +6,10 @@ WORKDIR /usr/src/app
 
 # Switch to root user and install NodeJS and curl
 USER root
-RUN wget -qO- https://deb.nodesource.com/setup_16.x | bash -
 RUN apt-get update \  
-     && apt-get install --yes --no-install-recommends nodejs
+     && apt-get install --yes wget
+RUN wget -qO- https://deb.nodesource.com/setup_16.x | bash -
+RUN apt-get install --yes --no-install-recommends nodejs
 
 RUN nodejs -v
 RUN npm -v
