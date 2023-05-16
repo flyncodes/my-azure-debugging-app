@@ -8,7 +8,7 @@ WORKDIR /usr/src/app
 USER root
 RUN apt-get update \  
      && apt-get install --yes wget
-RUN wget -qO- https://deb.nodesource.com/setup_16.x | bash -
+RUN wget -qO- https://deb.nodesource.com/setup_18.x | bash -
 RUN apt-get install --yes nodejs
 
 RUN node -v
